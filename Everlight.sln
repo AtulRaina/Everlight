@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EverlightTest", "Everlight\EverlightTest.csproj", "{8083176C-2C53-4944-8740-2464CC0FD1CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EverlightLib", "EverlightLib\EverlightLib.csproj", "{531139F1-7B8E-4833-A265-ACA368ED739D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavascriptAlerts", "JavascriptAlerts\JavascriptAlerts.csproj", "{1C60AE2A-4DC3-467E-9BAD-C477D0DD7E5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptAlertTests", "JavaScriptAlertTests\JavaScriptAlertTests.csproj", "{F99E19E8-2F4D-4F26-8080-6142408A7748}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8083176C-2C53-4944-8740-2464CC0FD1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8083176C-2C53-4944-8740-2464CC0FD1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8083176C-2C53-4944-8740-2464CC0FD1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8083176C-2C53-4944-8740-2464CC0FD1CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{531139F1-7B8E-4833-A265-ACA368ED739D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531139F1-7B8E-4833-A265-ACA368ED739D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531139F1-7B8E-4833-A265-ACA368ED739D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531139F1-7B8E-4833-A265-ACA368ED739D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C60AE2A-4DC3-467E-9BAD-C477D0DD7E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C60AE2A-4DC3-467E-9BAD-C477D0DD7E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C60AE2A-4DC3-467E-9BAD-C477D0DD7E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C60AE2A-4DC3-467E-9BAD-C477D0DD7E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99E19E8-2F4D-4F26-8080-6142408A7748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99E19E8-2F4D-4F26-8080-6142408A7748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99E19E8-2F4D-4F26-8080-6142408A7748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99E19E8-2F4D-4F26-8080-6142408A7748}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
