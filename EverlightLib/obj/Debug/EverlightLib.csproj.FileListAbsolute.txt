@@ -1,0 +1,10 @@
+C:\GreenField\Everlight\EverlightLib\bin\Debug\EverlightLib.dll
+C:\GreenField\Everlight\EverlightLib\bin\Debug\EverlightLib.pdb
+C:\GreenField\Everlight\EverlightLib\bin\Debug\WebDriver.dll
+C:\GreenField\Everlight\EverlightLib\bin\Debug\WebDriver.Support.dll
+C:\GreenField\Everlight\EverlightLib\bin\Debug\WebDriver.xml
+C:\GreenField\Everlight\EverlightLib\bin\Debug\WebDriver.Support.xml
+C:\GreenField\Everlight\EverlightLib\obj\Debug\EverlightLib.csproj.CoreCompileInputs.cache
+C:\GreenField\Everlight\EverlightLib\obj\Debug\EverlightLib.csproj.CopyComplete
+C:\GreenField\Everlight\EverlightLib\obj\Debug\EverlightLib.dll
+C:\GreenField\Everlight\EverlightLib\obj\Debug\EverlightLib.pdb

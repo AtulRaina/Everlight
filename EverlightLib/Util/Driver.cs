@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 
 namespace EverlightLib.Util
 {
@@ -21,9 +17,15 @@ namespace EverlightLib.Util
         {
             get { return ConstantsUtils.AlertsUrl; }
         }
+
         public static void Intitialize()
         {
-            Instance = new ChromeDriver();
+            /*Headless Magic */
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.AddArguments("headless");
+            Instance = new ChromeDriver(chromeOptions);
+
+            //     Instance = new ChromeDriver();
             TurnOnWait();
             Instance.Manage().Window.Maximize();
         }

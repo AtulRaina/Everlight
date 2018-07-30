@@ -1,16 +1,15 @@
 ﻿using Everlight.Util;
 using JavascriptAlerts;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using TechTalk.SpecFlow;
 
 namespace JavaScriptAlertTests
 {
     [Binding]
-    public class AlertSteps: Start
+    public class AlertSteps : Start
     {
+        private AlertHomePage alertHomepage;
 
-        AlertHomePage alertHomepage;
         [Given(@"I am on Java Script Alert page")]
         public void GivenIAmOnJavaScriptAlertPage()
         {
@@ -23,18 +22,16 @@ namespace JavaScriptAlertTests
         {
             alertHomepage.ClickButton();
         }
+
         [Given(@"I click on JsComfirmButton")]
         public void GivenIClickOnJsComfirmButton()
         {
             alertHomepage.ClickJsConfirmButton();
         }
 
-
         [When(@"I click Ok Button In Alert Window")]
         public void WhenIClickOkButtonInAlertWindow()
         {
-
-     
             alertHomepage.AlertClickOk();
         }
 
@@ -52,20 +49,14 @@ namespace JavaScriptAlertTests
 
         [Given(@"I send Text (.*)")]
         public void GivenISendText(string p0)
-
-
-
-
-
-
-
-
-
-
         {
             alertHomepage.EnterTextInAlert(p0);
         }
 
-
+        [When(@"I click Cancel Button In Alert Window")]
+        public void WhenIClickCancelButtonInAlertWindow()
+        {
+            alertHomepage.AlertClickCancel();
+        }
     }
 }

@@ -44,8 +44,8 @@ namespace JavaScriptAlertTests.Feature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Alerts", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Alerts", "In order to avoid silly mistakes\r\nAs a math idiot\r\nI want to be told the sum of t" +
+                    "wo numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -84,65 +84,173 @@ namespace JavaScriptAlertTests.Feature
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Alert Window Message")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Click on JS Alert Button and Select Ok")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Alerts")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void AlertWindowMessage()
+        public virtual void ClickOnJSAlertButtonAndSelectOk()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Alert Window Message", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click on JS Alert Button and Select Ok", new string[] {
                         "mytag"});
 #line 7
-this.ScenarioSetup(scenarioInfo);
+  this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("I am on Java Script Alert page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on Java Script Alert page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.And("I click on Alert Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+      testRunner.And("I click on Alert Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.When("I click Ok Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+     testRunner.When("I click Ok Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.Then("Message You successfuly clicked an alert is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+     testRunner.Then("Message You successfuly clicked an alert is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Confirm Window Click")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Click on JS Confirm Button and Select Ok")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Alerts")]
-        public virtual void ConfirmWindowClick()
+        public virtual void ClickOnJSConfirmButtonAndSelectOk()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Confirm Window Click", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click on JS Confirm Button and Select Ok", ((string[])(null)));
 #line 14
- this.ScenarioSetup(scenarioInfo);
+  this.ScenarioSetup(scenarioInfo);
 #line 15
- testRunner.Given("I am on Java Script Alert page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on Java Script Alert page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
- testRunner.And("I click on JsComfirmButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+      testRunner.And("I click on JsComfirmButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
- testRunner.When("I click Ok Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+     testRunner.When("I click Ok Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
- testRunner.Then("Message You clicked: Ok is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+     testRunner.Then("Message You clicked: Ok is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Prompt Window Click")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Click on JS Confirm Button and Select Cancel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Alerts")]
-        public virtual void PromptWindowClick()
+        public virtual void ClickOnJSConfirmButtonAndSelectCancel()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Prompt Window Click", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click on JS Confirm Button and Select Cancel", ((string[])(null)));
+#line 20
+  this.ScenarioSetup(scenarioInfo);
 #line 21
- this.ScenarioSetup(scenarioInfo);
+    testRunner.Given("I am on Java Script Alert page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
- testRunner.Given("I am on Java Script Alert page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+      testRunner.And("I click on JsComfirmButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
- testRunner.And("I click on JsPromptButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+     testRunner.When("I click Cancel Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 24
- testRunner.And("I send Text SampleText", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
- testRunner.When("I click Ok Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
- testRunner.Then("Message You entered: SampleText is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+     testRunner.Then("Message You clicked: Cancel is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Click On JS Prompt Button ,Enter Text and Select OK")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Alerts")]
+        public virtual void ClickOnJSPromptButtonEnterTextAndSelectOK()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click On JS Prompt Button ,Enter Text and Select OK", ((string[])(null)));
+#line 28
+  this.ScenarioSetup(scenarioInfo);
+#line 29
+    testRunner.Given("I am on Java Script Alert page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 30
+      testRunner.And("I click on JsPromptButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+      testRunner.And("I send Text SampleText", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
+     testRunner.When("I click Ok Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 33
+     testRunner.Then("Message You entered: SampleText is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Click On JS Prompt Button ,Enter Text and Select Cancel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Alerts")]
+        public virtual void ClickOnJSPromptButtonEnterTextAndSelectCancel()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click On JS Prompt Button ,Enter Text and Select Cancel", ((string[])(null)));
+#line 35
+  this.ScenarioSetup(scenarioInfo);
+#line 36
+    testRunner.Given("I am on Java Script Alert page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 37
+      testRunner.And("I click on JsPromptButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 38
+      testRunner.And("I send Text SampleText", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
+     testRunner.When("I click Cancel Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 40
+     testRunner.Then("Message You entered: null is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Click On JS Prompt Button and Select Cancel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Alerts")]
+        public virtual void ClickOnJSPromptButtonAndSelectCancel()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click On JS Prompt Button and Select Cancel", ((string[])(null)));
+#line 42
+  this.ScenarioSetup(scenarioInfo);
+#line 43
+    testRunner.Given("I am on Java Script Alert page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 44
+      testRunner.And("I click on JsPromptButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 45
+     testRunner.When("I click Cancel Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 46
+     testRunner.Then("Message You entered: null is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Play All Buttons")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Alerts")]
+        public virtual void PlayAllButtons()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Play All Buttons", ((string[])(null)));
+#line 49
+  this.ScenarioSetup(scenarioInfo);
+#line 50
+    testRunner.Given("I am on Java Script Alert page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 51
+      testRunner.And("I click on Alert Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 52
+     testRunner.When("I click Ok Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 53
+     testRunner.Then("Message You successfuly clicked an alert is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 54
+    testRunner.Given("I click on JsComfirmButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 55
+     testRunner.When("I click Ok Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 56
+     testRunner.Then("Message You clicked: Ok is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 57
+    testRunner.Given("I click on JsPromptButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 58
+      testRunner.And("I send Text SampleText", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 59
+     testRunner.When("I click Ok Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+     testRunner.Then("Message You entered: SampleText is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 61
+    testRunner.Given("I click on JsPromptButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 62
+     testRunner.When("I click Cancel Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 63
+     testRunner.Then("Message You entered: null is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 64
+    testRunner.Given("I click on JsComfirmButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 65
+     testRunner.When("I click Cancel Button In Alert Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 66
+     testRunner.Then("Message You clicked: Cancel is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

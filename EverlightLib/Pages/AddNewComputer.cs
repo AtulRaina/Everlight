@@ -1,28 +1,21 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EverlightLib.Pages
 {
-   public class AddNewComputer
+    public class AddNewComputer
     {
-     
         private IWebDriver driver;
 
         public AddNewComputer(IWebDriver driver)
         {
-           // this.driver = driver;
-            PageFactory.InitElements(driver,this);
+            // this.driver = driver;
+            PageFactory.InitElements(driver, this);
         }
-
 
         [FindsBy(How = How.CssSelector, Using = "#main > h1")]
         private IWebElement addComputerTitle;
+
         // classname
         ////*[@id="main"]/div[1]
         [FindsBy(How = How.XPath, Using = "//*[@id='main']/div[1]")]
@@ -31,12 +24,16 @@ namespace EverlightLib.Pages
         //name
         [FindsBy(How = How.Id, Using = "name")]
         private IWebElement addComputerName;
+
         [FindsBy(How = How.Id, Using = "introduced")]
         private IWebElement addComputerIntroduced;
+
         [FindsBy(How = How.Id, Using = "discontinued")]
         private IWebElement addComputerDiscontinued;
+
         [FindsBy(How = How.Id, Using = "company")]
         private IWebElement addComputerCompany;
+
         [FindsBy(How = How.CssSelector, Using = "#main > form > div > input")]
         private IWebElement addComputerCreate;
 
@@ -53,7 +50,7 @@ namespace EverlightLib.Pages
             deleteComputer.Click();
         }
 
-        public void  UpdateComputer()
+        public void UpdateComputer()
         {
             updateComputer.Click();
         }
@@ -62,6 +59,7 @@ namespace EverlightLib.Pages
         {
             return addComputerTitle.Text;
         }
+
         public string GetComputerAddedMessage()
         {
             string text = addComputerSuccessMessage.Text;
@@ -90,12 +88,11 @@ namespace EverlightLib.Pages
 
         public void setCompany(string company)
         {
-
             addComputerCompany.SendKeys(company);
 
             //electElement(browser.FindElement(By.CssSelector("#Menu_ParentMenuID"))).SelectBySubText("item1")
 
-        // addComputerCompany.FindElement(By.XPath(".//option[contains(text(),'OptionText')]")).Click();
+            // addComputerCompany.FindElement(By.XPath(".//option[contains(text(),'OptionText')]")).Click();
         }
     }
 }
