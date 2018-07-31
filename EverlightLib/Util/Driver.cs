@@ -20,12 +20,12 @@ namespace EverlightLib.Util
 
         public static void Intitialize()
         {
-            /*Headless Magic */
+            /*Headless Magic  */
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("headless");
             Instance = new ChromeDriver(chromeOptions);
-
-            //     Instance = new ChromeDriver();
+           
+        //    Instance = new ChromeDriver();
             TurnOnWait();
             Instance.Manage().Window.Maximize();
         }

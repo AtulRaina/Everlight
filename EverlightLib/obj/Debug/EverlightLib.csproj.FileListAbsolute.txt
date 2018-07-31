@@ -8,3 +8,4 @@ C:\GreenField\Everlight\EverlightLib\obj\Debug\EverlightLib.csproj.CoreCompileIn
 C:\GreenField\Everlight\EverlightLib\obj\Debug\EverlightLib.csproj.CopyComplete
 C:\GreenField\Everlight\EverlightLib\obj\Debug\EverlightLib.dll
 C:\GreenField\Everlight\EverlightLib\obj\Debug\EverlightLib.pdb
+C:\GreenField\Everlight\EverlightLib\obj\Debug\EverlightLib.csprojAssemblyReference.cache

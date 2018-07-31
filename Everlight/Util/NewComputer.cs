@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Everlight.Util
+﻿namespace Everlight.Util
 {
-    class NewComputer
+    internal class NewComputer
     {
         public string Name { get; set; }
         public string IntroducredDate { get; set; }

@@ -44,8 +44,7 @@ namespace Everlight.Feature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DeleteComputer", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DeleteComputer", "Delete Existing Computer", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -91,18 +90,76 @@ namespace Everlight.Feature
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Computer Can be deleted", new string[] {
                         "Delete"});
+#line 5
+  this.ScenarioSetup(scenarioInfo);
+#line 6
+    testRunner.Given("I am at home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
-this.ScenarioSetup(scenarioInfo);
+      testRunner.And("A computer with name Test Delete exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 8
- testRunner.Given("I am at home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+      testRunner.And("I Filter computer with Test Delete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.And("I Filter computer with Robo cop", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+      testRunner.And("I select the computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.And("I select the computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+     testRunner.When("I Click Delete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.When("I Click Delete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
- testRunner.Then("the computer is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+     testRunner.Then("the computer is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Multiple Computers can Be Deleted in the same session")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "DeleteComputer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Delete")]
+        public virtual void MultipleComputersCanBeDeletedInTheSameSession()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiple Computers can Be Deleted in the same session", new string[] {
+                        "Delete"});
+#line 14
+ this.ScenarioSetup(scenarioInfo);
+#line 15
+    testRunner.Given("I am at home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 16
+      testRunner.And("A computer with name JAVA exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+   testRunner.And("A computer with name PYTHON exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
+   testRunner.And("A computer with name C# exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+   testRunner.And("A computer with name C++ exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 20
+      testRunner.And("I Filter computer with JAVA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 21
+      testRunner.And("I select the computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+     testRunner.When("I Click Delete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
+     testRunner.Then("the computer is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 24
+  testRunner.Given("I Filter computer with PYTHON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+      testRunner.And("I select the computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+     testRunner.When("I Click Delete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+     testRunner.Then("the computer is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 28
+   testRunner.Given("I Filter computer with C#", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 29
+      testRunner.And("I select the computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 30
+     testRunner.When("I Click Delete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 31
+     testRunner.Then("the computer is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 32
+   testRunner.Given("I Filter computer with C++", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 33
+      testRunner.And("I select the computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+     testRunner.When("I Click Delete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+     testRunner.Then("the computer is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -110,3 +167,5 @@ this.ScenarioSetup(scenarioInfo);
 }
 #pragma warning restore
 #endregion
+
+

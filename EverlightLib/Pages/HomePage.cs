@@ -36,6 +36,7 @@ namespace EverlightLib
 
         public void EnterFilterText(string computerName)
         {
+            searchBox.Clear();
             searchBox.SendKeys(computerName);
         }
 
@@ -87,10 +88,6 @@ namespace EverlightLib
                 {
                     if (rowTD[0].Text.ToLower().Contains(Name.ToLower()))
                     {
-                        string test = rowTD[0].Text;
-                        rowTD[0].Click();
-                        rowTD[0].Click();
-
                         rowTD[0].FindElement(By.TagName("a")).Click();
                         break;
                     }
@@ -125,14 +122,20 @@ namespace EverlightLib
             return dic;
         }
 
-        public bool GetFiltredRecordCount()
+        public int GetFiltredRecordCount()
         {
             IWebElement tableElement = driver.FindElement(By.CssSelector("#main > table"));
             IList<IWebElement> tableRow = tableElement.FindElements(By.TagName("tr"));
             string myString = recordCount.Text;
-            int count = Convert.ToInt16(myString.Remove(myString.Length - "computers found".Length).Trim());
-
-            return count > 0;
+            try
+            {
+                int count = Convert.ToInt16(myString.Remove(myString.Length - "computers found".Length).Trim());
+                return count;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
     }
 }

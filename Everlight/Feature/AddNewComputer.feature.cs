@@ -44,8 +44,7 @@ namespace Everlight.Feature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AddNewComputer", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AddNewComputer", "Add new Computer ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -91,14 +90,14 @@ namespace Everlight.Feature
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add new Computer Page is displayed", new string[] {
                         "Insert"});
+#line 5
+  this.ScenarioSetup(scenarioInfo);
+#line 6
+    testRunner.Given("I am on home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
-this.ScenarioSetup(scenarioInfo);
+     testRunner.When("I click Add New Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
- testRunner.Given("I am on home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.When("I click Add New Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
- testRunner.Then("Add new Computer page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+     testRunner.Then("Add new Computer page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -112,11 +111,11 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("New computer can be added", new string[] {
                         "Insert"});
 #line 12
-this.ScenarioSetup(scenarioInfo);
+  this.ScenarioSetup(scenarioInfo);
 #line 13
- testRunner.Given("I am on home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
- testRunner.And("I click Add New Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+      testRunner.And("I click Add New Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Field",
@@ -134,11 +133,169 @@ this.ScenarioSetup(scenarioInfo);
                         "Company",
                         "IBM"});
 #line 15
- testRunner.And("I add details of computer", ((string)(null)), table1, "And ");
+      testRunner.And("I add details of computer", ((string)(null)), table1, "And ");
 #line 21
- testRunner.When("I Click Create this Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+     testRunner.When("I Click Create this Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
- testRunner.Then("New Computer is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+     testRunner.Then("New Computer is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User can not add computer with empty name")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "AddNewComputer")]
+        public virtual void UserCanNotAddComputerWithEmptyName()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can not add computer with empty name", ((string[])(null)));
+#line 26
+  this.ScenarioSetup(scenarioInfo);
+#line 27
+    testRunner.Given("I am on home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 28
+      testRunner.And("I click Add New Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table2.AddRow(new string[] {
+                        "Name",
+                        ""});
+            table2.AddRow(new string[] {
+                        "IntroducredDate",
+                        "1902-12-12"});
+            table2.AddRow(new string[] {
+                        "DiscontinuedDate",
+                        "1902-12-12"});
+            table2.AddRow(new string[] {
+                        "Company",
+                        "IBM"});
+#line 29
+      testRunner.And("I add details of computer", ((string)(null)), table2, "And ");
+#line 35
+     testRunner.When("I Click Create this Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
+     testRunner.Then("Message with Text Required is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 37
+      testRunner.And("Computer name text box is selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User can not add computer with Invalid Date format")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "AddNewComputer")]
+        public virtual void UserCanNotAddComputerWithInvalidDateFormat()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can not add computer with Invalid Date format", ((string[])(null)));
+#line 40
+  this.ScenarioSetup(scenarioInfo);
+#line 41
+    testRunner.Given("I am on home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 42
+      testRunner.And("I click Add New Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table3.AddRow(new string[] {
+                        "Name",
+                        "Robo cop"});
+            table3.AddRow(new string[] {
+                        "IntroducredDate",
+                        "12-12-1945"});
+            table3.AddRow(new string[] {
+                        "DiscontinuedDate",
+                        "1902-12-12"});
+            table3.AddRow(new string[] {
+                        "Company",
+                        "IBM"});
+#line 43
+      testRunner.And("I add details of computer", ((string)(null)), table3, "And ");
+#line 49
+     testRunner.When("I Click Create this Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 50
+     testRunner.Then("Invalid date text box is higligted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Newly added comptuer information is saved correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "AddNewComputer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Insert")]
+        public virtual void NewlyAddedComptuerInformationIsSavedCorrectly()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Newly added comptuer information is saved correctly", new string[] {
+                        "Insert"});
+#line 53
+  this.ScenarioSetup(scenarioInfo);
+#line 54
+    testRunner.Given("I am on home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 55
+      testRunner.And("I click Add New Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table4.AddRow(new string[] {
+                        "Name",
+                        "Robo cop"});
+            table4.AddRow(new string[] {
+                        "IntroducredDate",
+                        "1902-12-12"});
+            table4.AddRow(new string[] {
+                        "DiscontinuedDate",
+                        "1902-12-12"});
+            table4.AddRow(new string[] {
+                        "Company",
+                        "IBM"});
+#line 56
+      testRunner.And("I add details of computer", ((string)(null)), table4, "And ");
+#line 62
+     testRunner.When("I Click Create this Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 63
+     testRunner.Then("Computer Information is saved correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Newly added computer without dates is saved correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "AddNewComputer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Insert")]
+        public virtual void NewlyAddedComputerWithoutDatesIsSavedCorrectly()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Newly added computer without dates is saved correctly", new string[] {
+                        "Insert"});
+#line 66
+  this.ScenarioSetup(scenarioInfo);
+#line 67
+    testRunner.Given("I am on home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 68
+      testRunner.And("I click Add New Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table5.AddRow(new string[] {
+                        "Name",
+                        "Robo cop"});
+            table5.AddRow(new string[] {
+                        "IntroducredDate",
+                        ""});
+            table5.AddRow(new string[] {
+                        "DiscontinuedDate",
+                        ""});
+            table5.AddRow(new string[] {
+                        "Company",
+                        "IBM"});
+#line 69
+      testRunner.And("I add details of computer", ((string)(null)), table5, "And ");
+#line 75
+     testRunner.When("I Click Create this Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 76
+     testRunner.Then("Computer Information is saved correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

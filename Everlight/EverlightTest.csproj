@@ -96,6 +96,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\Hooks1.cs" />
     <Compile Include="Steps\UpdateSteps.cs" />
+    <Compile Include="Util\CrudHelpers.cs" />
     <Compile Include="Util\NewComputer.cs" />
     <Compile Include="Util\Start.cs" />
   </ItemGroup>

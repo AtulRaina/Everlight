@@ -44,8 +44,7 @@ namespace Everlight.Feature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Update", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Update", "Update computer information", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -91,12 +90,12 @@ namespace Everlight.Feature
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Computer Information is Updated", new string[] {
                         "Update"});
+#line 5
+  this.ScenarioSetup(scenarioInfo);
+#line 6
+    testRunner.Given("Computer with name Robo Cop already exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
-this.ScenarioSetup(scenarioInfo);
-#line 8
- testRunner.Given("I select a Computer from Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.And("I select Computer with Name <Testname>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+      testRunner.And("I select Computer with Name Robo Cop", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Field",
@@ -106,19 +105,205 @@ this.ScenarioSetup(scenarioInfo);
                         "TestComputer"});
             table1.AddRow(new string[] {
                         "IntroducredDate",
-                        "1902-12-12"});
+                        "1986-12-12"});
             table1.AddRow(new string[] {
                         "DiscontinuedDate",
-                        "1902-12-12"});
+                        "1600-12-12"});
             table1.AddRow(new string[] {
                         "Company",
-                        "IBM"});
-#line 10
- testRunner.And("I have Enter the details", ((string)(null)), table1, "And ");
+                        "APPLE"});
+#line 8
+      testRunner.And("I have Enter the details", ((string)(null)), table1, "And ");
+#line 14
+     testRunner.When("I click save Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+     testRunner.Then("Computer information Is Updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 16
- testRunner.When("I click save Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("I select Computer with Name TestComputer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table2.AddRow(new string[] {
+                        "Name",
+                        "Robo Cop"});
+            table2.AddRow(new string[] {
+                        "IntroducredDate",
+                        "2018-12-12"});
+            table2.AddRow(new string[] {
+                        "DiscontinuedDate",
+                        "2019-12-12"});
+            table2.AddRow(new string[] {
+                        "Company",
+                        "IBM"});
 #line 17
- testRunner.Then("Computer information Is Updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+      testRunner.And("I have Enter the details", ((string)(null)), table2, "And ");
+#line 23
+     testRunner.When("I click save Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+     testRunner.Then("Computer information Is Updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 25
+      testRunner.And("I Delete the computer with Robo Cop", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Computer Name is Updated and Saved")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Update")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Update")]
+        public virtual void ComputerNameIsUpdatedAndSaved()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Computer Name is Updated and Saved", new string[] {
+                        "Update"});
+#line 27
+  this.ScenarioSetup(scenarioInfo);
+#line 28
+    testRunner.Given("Computer with name Robo Cop already exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 29
+      testRunner.And("I select Computer with Name Robo Cop", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table3.AddRow(new string[] {
+                        "Name",
+                        "TestComputer"});
+            table3.AddRow(new string[] {
+                        "IntroducredDate",
+                        "1986-12-12"});
+            table3.AddRow(new string[] {
+                        "DiscontinuedDate",
+                        "1600-12-12"});
+            table3.AddRow(new string[] {
+                        "Company",
+                        "Apple Inc."});
+#line 30
+      testRunner.And("I have Enter the details", ((string)(null)), table3, "And ");
+#line 36
+     testRunner.When("I click save Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
+     testRunner.Then("Computer Name is saved correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Computer Introduced Date is Updated and Saved")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Update")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Update")]
+        public virtual void ComputerIntroducedDateIsUpdatedAndSaved()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Computer Introduced Date is Updated and Saved", new string[] {
+                        "Update"});
+#line 40
+  this.ScenarioSetup(scenarioInfo);
+#line 41
+    testRunner.Given("Computer with name Robo Cop already exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 42
+      testRunner.And("I select Computer with Name Robo Cop", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table4.AddRow(new string[] {
+                        "Name",
+                        "TestComputer"});
+            table4.AddRow(new string[] {
+                        "IntroducredDate",
+                        "1986-12-12"});
+            table4.AddRow(new string[] {
+                        "DiscontinuedDate",
+                        "1600-12-12"});
+            table4.AddRow(new string[] {
+                        "Company",
+                        "APPLE"});
+#line 43
+      testRunner.And("I have Enter the details", ((string)(null)), table4, "And ");
+#line 49
+     testRunner.When("I click save Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 50
+     testRunner.Then("Computer Introduced date is saved correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Computer Discontinued Date is Updated and Saved")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Update")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Update")]
+        public virtual void ComputerDiscontinuedDateIsUpdatedAndSaved()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Computer Discontinued Date is Updated and Saved", new string[] {
+                        "Update"});
+#line 52
+  this.ScenarioSetup(scenarioInfo);
+#line 53
+    testRunner.Given("Computer with name Robo Cop already exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 54
+      testRunner.And("I select Computer with Name Robo Cop", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table5.AddRow(new string[] {
+                        "Name",
+                        "TestComputer"});
+            table5.AddRow(new string[] {
+                        "IntroducredDate",
+                        "1986-12-12"});
+            table5.AddRow(new string[] {
+                        "DiscontinuedDate",
+                        "1600-12-12"});
+            table5.AddRow(new string[] {
+                        "Company",
+                        "APPLE"});
+#line 55
+      testRunner.And("I have Enter the details", ((string)(null)), table5, "And ");
+#line 61
+     testRunner.When("I click save Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 62
+     testRunner.Then("Computer Discontinued Date is saved Correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Computer Company Name is Updated and Saved")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Update")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Update")]
+        public virtual void ComputerCompanyNameIsUpdatedAndSaved()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Computer Company Name is Updated and Saved", new string[] {
+                        "Update"});
+#line 65
+  this.ScenarioSetup(scenarioInfo);
+#line 66
+    testRunner.Given("Computer with name Robo Cop already exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 67
+      testRunner.And("I select Computer with Name Robo Cop", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table6.AddRow(new string[] {
+                        "Name",
+                        "TestComputer"});
+            table6.AddRow(new string[] {
+                        "IntroducredDate",
+                        "1986-12-12"});
+            table6.AddRow(new string[] {
+                        "DiscontinuedDate",
+                        "1600-12-12"});
+            table6.AddRow(new string[] {
+                        "Company",
+                        "Apple Inc."});
+#line 68
+      testRunner.And("I have Enter the details", ((string)(null)), table6, "And ");
+#line 74
+     testRunner.When("I click save Computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 75
+     testRunner.Then("Computer Company is saved correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

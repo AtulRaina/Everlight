@@ -45,6 +45,19 @@ namespace EverlightLib.Pages
         [FindsBy(How = How.CssSelector, Using = "#main > form:nth-child(2) > div > input")]
         private IWebElement updateComputer;
 
+        [FindsBy(How = How.CssSelector, Using = "#main > form > fieldset > div.clearfix.error > div > span")]
+        private IWebElement addComputerNameRequireMessage;
+
+        public bool ComputerNameIsSelected()
+        {
+            return addComputerName.Enabled;
+        }
+
+        public bool IntroducedDateIsSelected()
+        {
+            return addComputerIntroduced.Enabled;
+        }
+
         public void DeleteComputer()
         {
             deleteComputer.Click();
@@ -68,11 +81,13 @@ namespace EverlightLib.Pages
 
         public void setComputerName(string name)
         {
+            addComputerName.Clear();
             addComputerName.SendKeys(name);
         }
 
         public void setIntroducredDate(string introducredDate)
         {
+            addComputerIntroduced.Clear();
             addComputerIntroduced.SendKeys(introducredDate);
         }
 
@@ -81,18 +96,21 @@ namespace EverlightLib.Pages
             addComputerCreate.Click();
         }
 
+        public string EmptyNameMessage()
+        {
+            string text = addComputerNameRequireMessage.Text;
+            return text;
+        }
+
         public void setDiscontinuedDate(string discontinuedDate)
         {
+            addComputerDiscontinued.Clear();
             addComputerDiscontinued.SendKeys(discontinuedDate);
         }
 
         public void setCompany(string company)
         {
             addComputerCompany.SendKeys(company);
-
-            //electElement(browser.FindElement(By.CssSelector("#Menu_ParentMenuID"))).SelectBySubText("item1")
-
-            // addComputerCompany.FindElement(By.XPath(".//option[contains(text(),'OptionText')]")).Click();
         }
     }
 }

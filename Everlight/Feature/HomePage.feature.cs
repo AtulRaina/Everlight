@@ -44,8 +44,7 @@ namespace Everlight.Feature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "HomePage", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "HomePage", "Search for computer", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -92,16 +91,16 @@ namespace Everlight.Feature
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Computer Can be filtered By name", @__tags);
+#line 5
+  this.ScenarioSetup(scenarioInfo);
+#line 6
+    testRunner.Given("I Navigate to Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
-this.ScenarioSetup(scenarioInfo);
+     testRunner.When(string.Format("I Enter search Term {0}", filterComputer), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
- testRunner.Given("I Navigate to Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+      testRunner.And("I click on Filter Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.When(string.Format("I Enter search Term {0}", filterComputer), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
- testRunner.And("I click on Filter Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
- testRunner.Then(string.Format("Computer List is filtred with {0}", filterComputer), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+     testRunner.Then(string.Format("Computer List is filtred with {0}", filterComputer), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -114,8 +113,8 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FilterComputer", "ASCI")]
         public virtual void ComputerCanBeFilteredByName_ASCI()
         {
-#line 7
-this.ComputerCanBeFilteredByName("ASCI", ((string[])(null)));
+#line 5
+  this.ComputerCanBeFilteredByName("ASCI", ((string[])(null)));
 #line hidden
         }
         
@@ -127,8 +126,8 @@ this.ComputerCanBeFilteredByName("ASCI", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FilterComputer", "IBM")]
         public virtual void ComputerCanBeFilteredByName_IBM()
         {
-#line 7
-this.ComputerCanBeFilteredByName("IBM", ((string[])(null)));
+#line 5
+  this.ComputerCanBeFilteredByName("IBM", ((string[])(null)));
 #line hidden
         }
         
@@ -140,12 +139,12 @@ this.ComputerCanBeFilteredByName("IBM", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FilterComputer", "APPLE")]
         public virtual void ComputerCanBeFilteredByName_APPLE()
         {
-#line 7
-this.ComputerCanBeFilteredByName("APPLE", ((string[])(null)));
+#line 5
+  this.ComputerCanBeFilteredByName("APPLE", ((string[])(null)));
 #line hidden
         }
         
-        public virtual void NumberOfFilteredComputersAreDisplayedCorrectly(string filterComputer, string[] exampleTags)
+        public virtual void NumberOfFilteredComputersAreDisplayedCorrectly(string filterComputer, string number, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "Filter"};
@@ -154,16 +153,16 @@ this.ComputerCanBeFilteredByName("APPLE", ((string[])(null)));
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Number of Filtered Computers are displayed correctly", @__tags);
+#line 17
+  this.ScenarioSetup(scenarioInfo);
+#line 18
+    testRunner.Given("I Navigate to Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
-this.ScenarioSetup(scenarioInfo);
+     testRunner.When(string.Format("I Enter search Term {0}", filterComputer), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
- testRunner.Given("I Navigate to Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+      testRunner.And("I click on Filter Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 21
- testRunner.When(string.Format("I Enter search Term {0}", filterComputer), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
- testRunner.And("I click on Filter Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
- testRunner.Then("Number of Filtred Computers are displayed Correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+     testRunner.Then(string.Format("Number of Filtred Computers are displayed Correctly {0}", number), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -174,10 +173,11 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Filter")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "ASCI")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FilterComputer", "ASCI")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:number", "6")]
         public virtual void NumberOfFilteredComputersAreDisplayedCorrectly_ASCI()
         {
-#line 19
-this.NumberOfFilteredComputersAreDisplayedCorrectly("ASCI", ((string[])(null)));
+#line 17
+  this.NumberOfFilteredComputersAreDisplayedCorrectly("ASCI", "6", ((string[])(null)));
 #line hidden
         }
         
@@ -187,10 +187,11 @@ this.NumberOfFilteredComputersAreDisplayedCorrectly("ASCI", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Filter")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "IBM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FilterComputer", "IBM")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:number", "25")]
         public virtual void NumberOfFilteredComputersAreDisplayedCorrectly_IBM()
         {
-#line 19
-this.NumberOfFilteredComputersAreDisplayedCorrectly("IBM", ((string[])(null)));
+#line 17
+  this.NumberOfFilteredComputersAreDisplayedCorrectly("IBM", "25", ((string[])(null)));
 #line hidden
         }
         
@@ -200,13 +201,16 @@ this.NumberOfFilteredComputersAreDisplayedCorrectly("IBM", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Filter")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "APPLE")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FilterComputer", "APPLE")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:number", "13")]
         public virtual void NumberOfFilteredComputersAreDisplayedCorrectly_APPLE()
         {
-#line 19
-this.NumberOfFilteredComputersAreDisplayedCorrectly("APPLE", ((string[])(null)));
+#line 17
+  this.NumberOfFilteredComputersAreDisplayedCorrectly("APPLE", "13", ((string[])(null)));
 #line hidden
         }
     }
 }
 #pragma warning restore
 #endregion
+
+
